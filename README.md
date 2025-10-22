@@ -23,7 +23,7 @@ Before running this project, make sure you have the following installed:
 
 ### 1. Clone the Repository
 
-git clone <your-repository-url> //Enter the actual github url 
+git clone https://github.com/tiwari99887/task-manager.git
 cd task-manager
 
 
