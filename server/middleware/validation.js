@@ -8,13 +8,6 @@ const validateTask = (req, res, next) => {
     });
   }
   
-  if (!description || description.trim() === '') {
-    return res.status(400).json({ 
-      success: false,
-      message: 'Description is required' 
-    });
-  }
-  
   next();
 };
 

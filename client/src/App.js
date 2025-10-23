@@ -77,7 +77,9 @@ function App() {
       console.log("Task creation request sent");
     } catch (err) {
       console.error("Error creating task:", err);
-      alert("Failed to create task");
+      alert(
+        `Failed to create task: ${err.response?.data?.message || err.message}`
+      );
     }
   };
 
