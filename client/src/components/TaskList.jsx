@@ -1,7 +1,7 @@
 import React from 'react';
 import TaskItem from './TaskItem';
 
-function TaskList({ tasks, filter, onUpdateStatus, onDelete }) {
+function TaskList({ tasks, filter, onUpdateStatus, onDelete, onUpdate }) {
   // Add safety check: ensure tasks is always an array
   const safeTasks = Array.isArray(tasks) ? tasks : [];
   
@@ -23,6 +23,7 @@ function TaskList({ tasks, filter, onUpdateStatus, onDelete }) {
             task={task}
             onUpdateStatus={onUpdateStatus}
             onDelete={onDelete}
+            onUpdate={onUpdate} 
           />
         ))
       )}

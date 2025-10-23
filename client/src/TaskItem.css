@@ -1,0 +1,234 @@
+.task-card {
+  background: white;
+  border-left: 4px solid #6c63ff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.task-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+.menu-wrapper {
+  position: relative;
+  margin-left: 12px;
+}
+
+.three-dot-menu {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #666;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.three-dot-menu:hover {
+  background: #f0f0f0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 120px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-menu button:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-menu button.delete-menu-item {
+  background: #dc3545;
+  color: white;
+}
+
+.dropdown-menu button.delete-menu-item:hover {
+  background: #c82333;
+}
+
+.task-content {
+  margin: 12px 0;
+  color: #666;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.status-badge.to-do {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.in-progress {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status-badge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.progress-btn,
+.complete-btn {
+  background: #28a745;
+  color: white;
+}
+
+.progress-btn:hover,
+.complete-btn:hover {
+  background: #218838;
+}
+
+.back-btn,
+.reopen-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.back-btn:hover,
+.reopen-btn:hover {
+  background: #5a6268;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+/* Edit Mode Styles */
+.edit-mode {
+  width: 100%;
+}
+
+.edit-title-input,
+.edit-content-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  margin-bottom: 12px;
+  transition: border-color 0.3s;
+}
+
+.edit-title-input {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.edit-content-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.edit-title-input:focus,
+.edit-content-textarea:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.save-btn {
+  background: #6c63ff;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #5a52d5;
+}
+
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #c82333;
+}

@@ -83,6 +83,20 @@ function App() {
     }
   };
 
+  const handleUpdateTask = async (id, updatedData) => {
+    try {
+      console.log("Attempting to update task content:", id, updatedData);
+      const response = await updateTask(id, updatedData);
+      console.log("Task content update successful:", response.data);
+    } catch (err) {
+      console.error("Error updating task content:", err);
+      console.error("Server error details:", err.response?.data);
+      alert(
+        `Failed to update task: ${err.response?.data?.error || err.message}`
+      );
+    }
+  };
+
   const handleUpdateStatus = async (id, status) => {
     try {
       console.log("Attempting to update task:", id, "with status:", status);
@@ -127,6 +141,7 @@ function App() {
           filter={filter}
           onUpdateStatus={handleUpdateStatus}
           onDelete={handleDeleteTask}
+          onUpdate={handleUpdateTask} 
         />
       </div>
     </div>
